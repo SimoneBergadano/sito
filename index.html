@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ora automatica</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+    }
+    #ora {
+      font-size: 48px;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ora attuale</h1>
+  <p id="ora"></p>
+  <script>
+    function aggiornaOra() {
+      const ora = new Date().toLocaleTimeString();
+      document.getElementById("ora").textContent = ora;
+    }
+    setInterval(aggiornaOra, 1000); // Aggiorna ogni secondo
+    aggiornaOra(); // Aggiorna subito
+  </script>
+</body>
+</html>
